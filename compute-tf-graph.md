@@ -143,15 +143,16 @@ graph LR
   Product["*"]
   Minus["-"]
 
-	A:::hidden -->|1| Plus
-	B:::hidden -->|2| Plus
-	Plus --> Product
-	C:::hidden -->|4| Product
-	Product --> E:::hidden
-	D:::hidden -->|7| Minus
-	Plus --> Minus
-	Minus --> F:::hidden
-	classDef hidden display: none;
+  A:::hidden -->|1| Plus
+  B:::hidden -->|2| Plus
+  Plus --> Product
+  C:::hidden -->|4| Product
+  Product --> E:::hidden
+  E -->|Result| Minus
+  D:::hidden -->|7| Minus
+  Minus --> F:::hidden
+  classDef hidden display: none;
+
 ```
 
 ### Unified dataflow graph in TensorFlow
